@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public\\keycloakify-dev-resources",
+    "\\.storybook",
+    "\\src",
     "\\src\\login"
   ],
-  "SelectedNode": "\\tsconfig.json",
+  "SelectedNode": "\\.storybook\\vite-plugin-keycloakify.ts",
   "PreviewInSolutionExplorer": false
 }

@@ -5,9 +5,7 @@
     "lib": [ "ES2020", "DOM", "DOM.Iterable" ],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "allowImportingTsExtensions": true,
@@ -15,21 +13,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": [ "src" ],
-  "references": [ { "path": "./tsconfig.node.json" } ]
-}
-{
-  "compilerOptions": {
-    "moduleResolution": "NodeNext",
+    "noFallthroughCasesInSwitch": true,
     "paths": {
       "keycloakify/*": [ "./node_modules/keycloakify/dist/*" ]
     }
-  }
+  },
+  "include": [ "src" ],
+  "references": [ { "path": "./tsconfig.node.json" } ]
 }

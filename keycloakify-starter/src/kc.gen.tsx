@@ -34,14 +34,14 @@ declare global {
 
 export const KcLoginPage = lazy(() => import("./login/KcPage"));
 
-export function KcPage(props: { kcContext: KcContext; fallback?: ReactNode }) {
-    const { kcContext, fallback } = props;
+export function KcPage(props: { kcContext: KcContext; fallback?: ReactNode; doUseDefaultCss?: boolean; classes?: Record<string, string> }) {
+    const { kcContext, fallback, doUseDefaultCss = true, classes } = props;
     return (
         <Suspense fallback={fallback}>
             {(() => {
                 switch (kcContext.themeType) {
                     case "login":
-                        return <KcLoginPage kcContext={kcContext} />;
+                        return <KcLoginPage kcContext={kcContext} doUseDefaultCss={doUseDefaultCss} classes={classes} />;
                 }
             })()}
         </Suspense>
